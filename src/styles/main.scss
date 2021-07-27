@@ -5,3 +5,160 @@
 body {
   background: $c-gray;
 }
+
+$colorAzure: #62d0df;
+$colorViolet:#22356f;
+$colorOrange:#f9b640;
+
+
+.page {
+  &__body {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.header {
+  box-sizing: border-box;
+  height: 100vh;
+  padding: 27px 0 75px 170px;
+
+  background-color:#f4f9e2;
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 18px;
+    font-family: Larsseit;
+    font-size: 48px;
+    line-height: 53px;
+    font-weight: bold;
+    letter-spacing: -0.035em;
+    color: $colorViolet;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-left: 320px;
+
+    border-radius: 50px;
+    width: 150px;
+    height: 50px;
+    background-color: $colorAzure;
+
+    font-family: Larsseit;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  &__content {
+
+  }
+
+  &__about {
+    width: 470px;
+
+    font-family: Larsseit;
+    font-size: 24px;
+    line-height: 42px;
+    color: $colorViolet;
+  }
+
+  &__who-am-i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 150px;
+    height: 50px;
+    background-color: $colorOrange;
+    
+    text-decoration: none;
+    font-family: Larsseit;
+    color: #fff;
+    font-size: 16px;
+    line-height: 23px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+  }
+
+  &__what-do-i-do {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 150px;
+    height: 50px;
+    
+    text-decoration: none;
+    font-family: Larsseit;
+    color: $colorOrange;
+    font-size: 16px;
+    line-height: 23px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+  }
+}
+
+.nav {
+  &__list {
+    display: flex;
+    align-items: center;
+  
+    margin: 0;
+    padding: 0;
+  
+    list-style: none;
+  }
+
+  &__link {
+    
+    color: $colorViolet;
+    text-decoration: none;
+    font-family: Larsseit;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  &__item {
+    position: relative;
+    text-decoration: none;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+
+    &:hover::after {
+      content: '';
+      
+      position: absolute;
+      bottom: 0;
+      display: block;
+      width: 120%;
+      height: 5px;
+
+      background-color: #F4F9E2;
+      box-shadow: inset 0px -1px 0px #22356F;
+    }
+  }
+}
+
+.logo {
+
+  color: $colorAzure;
+  font-family: Larsseit;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 27px;
+  letter-spacing: -0.035em;
+}
