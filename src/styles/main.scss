@@ -1,6 +1,13 @@
 @import "utils";
 @import "fonts";
 
+@import "blocks/header.scss";
+@import "blocks/logo.scss";
+@import "blocks/nav.scss";
+@import "blocks/why.scss";
+@import "blocks/about.scss";
+@import "blocks/footer.scss";
+
 * {
   box-sizing: border-box;
 }
@@ -12,163 +19,53 @@ html {
   font-weight: normal;
 }
 
-.page {
-  &__body {
-    width: 100%;
-  }
-}
 
-.header {
-  height: 100vh;
-  padding-bottom: 75px;
-  padding-left: 10%;
-  width: 100%;
-
-  background-color:#f4f9e2;
-
-  &__nav {
-    display: flex;
-    justify-content: space-between;
-
-    padding-top: 30px;
-  }
-
+.help {
   &__title {
-    margin-bottom: 18px;
-    font-family: Larsseit;
-    font-size: 48px;
-    line-height: 53px;
-    font-weight: bold;
-    letter-spacing: -0.035em;
-    color: $colorViolet;
-  }
+    padding-bottom: 24px;
 
-  &__button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    margin-right: 30px;
-
-    border-radius: 50px;
-    width: 150px;
-    height: 50px;
-    background-color: $colorAzure;
-
-    font-family: Larsseit;
-    font-size: 14px;
-    line-height: 16px;
-    font-weight: bold;
-    color: #fff;
-    text-decoration: none;
-  }
-
-  &__content {
-    margin-top: 180px;
-  }
-
-  &__about {
-    width: 470px;
-
-    font-family: Larsseit;
-    line-height: 42px;
-    color: $colorViolet;
-  }
-
-  &__links {
-    display: flex ;
-  }
-
-  &__link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 150px;
-    height: 50px;
-    background-color: $colorOrange;
-    
-    text-decoration: none;
-    font-family: Larsseit;
-    color: #fff;
+    opacity: 50%;
     font-size: 16px;
-    line-height: 23px;
-    font-weight: bold;
-    letter-spacing: 0.1em;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.06em;
+    font-weight: normal;
 
-    &--inversive {
-      color: $colorOrange;
-      background-color: #f4f9e2;
-    }
-  }
-}
-
-.nav {
-  &__list {
-    display: flex;
-    align-items: center;
-  
-    list-style: none;
-  }
-
-  &__link {
-    
     color: $colorViolet;
-    text-decoration: none;
-    font-family: Larsseit;
-    font-size: 14px;
-    line-height: 16px;
   }
 
-  &__item {
-    position: relative;
-    text-decoration: none;
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
 
-    &:not(:last-child) {
-      margin-right: 20px;
-    }
-
-    &:hover::after {
-      content: '';
-      
-      position: absolute;
-      bottom: 0;
-      display: block;
-      width: 120%;
-      height: 5px;
-
-      background-color: #F4F9E2;
-      box-shadow: inset 0px -1px 0px #22356F;
-    }
+    margin-bottom: 120px;
   }
-}
 
-.logo {
-  &__link {
-    color: $colorAzure;
-    text-decoration: none;
-    font-family: Larsseit;
-    font-weight: bold;
-    line-height: 27px;
-    letter-spacing: -0.035em;
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    height: 360px;
+    
+    text-align: center;
+    font-size: 32px;
+    line-height: 34px;
+    letter-spacing: -0.006em;
+    color: #fff;
   }
-}
-
-.footer {
-  height: 80px;
   
-  padding: 32px 898px 26px 179px;
-  background-color: $colorAzure;
+  &__decoration {
+    margin-bottom: 23px;
 
-  font-family: Larsseit;
-  font-size: 14px;
-  font-weight: bold;
-  line-height: 11px;
-  letter-spacing: -0.006em;
-  color: #fff;
+    height: 72px;
+    width: 80%;
+    border-bottom: 1px solid #fff;
+  }
 
-  &::before {
-    content: '©';
-    margin-right: 8px;
+  @for $n from 0 through 4 {
+    &__card:nth-child(#{$n + 1}) {
+      background-color: rgb(calc(#{$n} * 51),0,0);
+    }
   }
 }
