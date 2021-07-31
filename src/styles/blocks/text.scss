@@ -1,0 +1,14 @@
+.text {
+  font-size: 14px;
+  line-height: 23px;
+  letter-spacing: -0.01em;
+  color: $colorViolet;
+  text-decoration: none;
+
+  opacity: 50%;
+
+  &--email {
+    color: $colorAzure;
+    opacity: 100%;
+  }
+}

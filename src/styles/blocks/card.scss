@@ -1,0 +1,32 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  height: 360px;
+  
+  text-align: center;
+  font-size: 32px;
+  line-height: 34px;
+  letter-spacing: -0.01em;
+  color: #fff;
+
+  @include onTablet {
+    height: 300px;
+  }
+
+  @each $index, $color in $colors-help {
+    &:nth-child(#{$index}) {
+      background-color: $color;
+    }
+  }
+
+  &::before {
+    content: "";
+    margin-bottom: 23px;
+
+    height: 72px;
+    width: 80%;
+    border-bottom: 1px solid #fff;
+  }
+}

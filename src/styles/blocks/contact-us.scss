@@ -1,0 +1,61 @@
+.contact-us {
+  display: flex;
+  justify-content: space-between;
+
+  background-color: $colorViolet;
+
+  &__text-container {
+    display: flex;
+    flex-direction: column;
+
+    margin-left: 180px;
+  }
+
+  &__subtitle {
+    font-size: 16px;
+    line-height: 12px;
+    letter-spacing: 0.06em;
+    color: #fff;
+
+    margin-top: 102px;
+
+    margin-bottom: 230px;
+  }
+
+  &__title {
+    font-size: 64px;
+    line-height: 94px;
+    letter-spacing: -0.01em;
+    color: #fff;
+
+    margin-bottom: 75px;
+  }
+
+  &__text {
+    font-size: 36px;
+    line-height: 53px;
+    letter-spacing: -0.01em;
+    color: #fff;
+
+    margin-bottom: 94px;
+  }
+
+  &__get {
+    font-size: 16px;
+    line-height: 23px;
+    letter-spacing: 0.1em;
+    color: $colorAzure;
+    text-decoration: none;
+
+    margin-bottom: 42px;
+  }
+
+  &__image {
+    max-width: 580px;
+    margin-left: 100px;
+
+    @include onTablet {
+      display: none;
+    }
+  }
+}
