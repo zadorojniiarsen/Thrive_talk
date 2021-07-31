@@ -15,6 +15,10 @@
     height: 300px;
   }
 
+  @include onMobile {
+    font-size: 24px;
+  }
+
   @each $index, $color in $colors-help {
     &:nth-child(#{$index}) {
       background-color: $color;

@@ -8,6 +8,10 @@
     @include onTablet {
       grid-template-columns: repeat(2, 1fr);
     }
+
+    @include onMobile {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__card {

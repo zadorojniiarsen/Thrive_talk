@@ -1,12 +1,15 @@
 .header {
   position: relative;
-  padding: 0 10% 75px;
 
   background-color: #f4f9e2;
 
   &__nav {
     padding-top: 30px;
     margin-bottom: 180px;
+
+    @include onMobile {
+      margin-bottom: 100px;
+    }
   }
 
   &__title {
@@ -20,10 +23,18 @@
 
     margin-bottom: 58px;
     z-index: 1;
+
+    @include onMobile {
+      font-size: 38px;
+    }
   }
 
   &__logo {
     margin-bottom: 36px;
+  }
+
+  &__text-container {
+    padding: 0 10% 75px;
   }
 
   &__about {
@@ -69,6 +80,11 @@
 
     @include onTablet {
       width: 200px;
+    }
+
+    @include onMobile {
+      line-height: 16px;
+      font-size: 12px;
     }
 
     &:hover {
@@ -145,6 +161,8 @@
       right: 20px;
 
       width: 50px;
+
+      background-color: rgba(0,0,0,0);
     }
 
     &-text {

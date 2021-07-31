@@ -4,6 +4,8 @@
 
   max-width: 1130px;
 
+  margin: 0 auto;
+
   @include onTablet {
     flex-direction: column;
   }
@@ -28,6 +30,16 @@
     @include onTablet {
       margin: 0 auto;
     }
+
+    @media (max-width: 545px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+
+    @include onMobile {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__link {
@@ -41,6 +53,7 @@
 
     @include onTablet {
       font-size: 30px;
+      line-height: 32px;
     }
   }
 
@@ -51,6 +64,10 @@
 
     text-decoration: none;
     z-index: 1;
+
+    @media (max-width: 545px) {
+      margin: 20 10;
+    }
 
     &:hover::after {
       content: "";
