@@ -7,10 +7,15 @@
 
   &__image {
     object-fit: cover;
+    transition: 0.3s;
 
     @include onTablet {
       height: 400px;
       width: 100%;
+    }
+
+    &:hover {
+      transform: scale(0.9);
     }
   }
 
@@ -28,6 +33,14 @@
 
     @include onMobile {
       grid-template-columns: 1fr;
+    }
+  }
+
+  &__block {
+    @include onMobile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
   }
   

@@ -1,4 +1,10 @@
 .logo {
+  transition: 0.3s;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
   &__link {
     color: $colorAzure;
     text-decoration: none;

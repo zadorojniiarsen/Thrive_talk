@@ -17,6 +17,10 @@
       height: 350px;
     }
 
+    @include onMobile {
+      height: 150px;
+    }
+
     &--image {
       background-image: url(../images/boxes.png);
     }
@@ -32,6 +36,10 @@
       margin-bottom: 30px;
 
       height: 96px;
+
+      @include onMobile {
+        height: 35px;
+      }
     }
   }
 }

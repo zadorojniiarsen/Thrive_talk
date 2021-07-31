@@ -20,9 +20,19 @@
     padding: 55px 77px 37px 105px;
     height: 240px;
 
+    transition: 0.5s;
+
     @include onTablet {
       padding: 0;
       margin: 20px;
+    }
+
+    @include onMobile {
+      height: 130px;
+    }
+
+    &:hover {
+      transform: translateY(20px);
     }
   }
 
@@ -40,6 +50,10 @@
     line-height: 25px;
     letter-spacing: -0.03em;
     color: $colorViolet;
-    opacity: 50%;
+    opacity: 0.5;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 }

@@ -5,10 +5,20 @@
   color: $colorViolet;
   text-decoration: none;
 
-  opacity: 50%;
+  opacity: 0.5;
+
+  transition: 0.3s;
 
   &--email {
     color: #0052c1;
     opacity: 100%;
+
+    &:hover {
+      color: #5383d8;
+    }
+  }
+
+  &:hover {
+    opacity: 1;
   }
 }

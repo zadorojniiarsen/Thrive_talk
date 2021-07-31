@@ -18,10 +18,16 @@
     margin-right: 106px;
     object-fit: cover;
 
+    transition: 0.3s;
+
     @include onTablet {
       height: 300px;
       width: 100%;
       margin-bottom: 50px;
+    }
+
+    &:hover {
+      transform: scale(0.9);
     }
   }
 
@@ -71,5 +77,11 @@
     text-decoration: none;
 
     margin-bottom: 42px;
+
+    transition: 0.3s;
+
+    &:hover {
+      opacity: 0.7;
+    }
   }
 }
