@@ -5,8 +5,8 @@
   }
 }
 
-@mixin onDesktop {
-  @media (min-width:1024px) {
+@mixin onMobile {
+  @media (max-width:320px) {
     @content;
   }
 }
