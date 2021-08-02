@@ -9,6 +9,10 @@
 
   transition: 0.3s;
 
+  @include onTablet {
+    text-align: center;
+  }
+
   &--email {
     color: #0052c1;
     opacity: 100%;
@@ -16,9 +20,5 @@
     &:hover {
       color: #5383d8;
     }
-  }
-
-  &:hover {
-    opacity: 1;
   }
 }

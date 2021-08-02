@@ -30,10 +30,6 @@
     @include onMobile {
       height: 130px;
     }
-
-    &:hover {
-      transform: translateY(20px);
-    }
   }
 
   &__title {
@@ -42,6 +38,10 @@
     letter-spacing: -0.03em;
     color: $colorViolet;
     margin-bottom: 28px;
+
+    @include onTablet {
+      text-align: center;
+    }
   }
 
   &__text {
@@ -52,8 +52,9 @@
     color: $colorViolet;
     opacity: 0.5;
 
-    &:hover {
-      opacity: 1;
+    @include onTablet {
+      margin: 0 auto;
+      text-align: center;
     }
   }
 }

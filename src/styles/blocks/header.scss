@@ -24,6 +24,10 @@
     margin-bottom: 58px;
     z-index: 1;
 
+    @include onTablet {
+      text-align: center;
+    }
+
     @include onMobile {
       font-size: 38px;
     }
@@ -31,6 +35,10 @@
 
   &__logo {
     margin-bottom: 36px;
+
+    @include onTablet {
+      text-align: center;
+    }
   }
 
   &__text-container {
@@ -49,6 +57,11 @@
     color: $colorViolet;
 
     z-index: 1;
+
+    @include onTablet {
+      text-align: center;
+      margin: 0 auto 63px;
+    }
   }
 
   &__links {
