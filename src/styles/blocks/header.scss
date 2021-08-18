@@ -3,6 +3,14 @@
 
   background-color: #f4f9e2;
 
+  &__text-container {
+    max-width: 1130px;
+
+    margin: 0 auto;
+
+    padding: 0 30px 75px;
+  }
+
   &__nav {
     padding-top: 30px;
     margin-bottom: 180px;
@@ -39,10 +47,6 @@
     @include onTablet {
       text-align: center;
     }
-  }
-
-  &__text-container {
-    padding: 0 10% 75px;
   }
 
   &__about {

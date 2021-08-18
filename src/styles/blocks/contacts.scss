@@ -38,11 +38,10 @@
   }
 
   &__block {
-    @include onMobile {
+    @include onTablet {
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
     }
   }
   
