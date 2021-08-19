@@ -13,7 +13,8 @@
     transform: rotate(90deg);
   }
   &:checked ~ .nav__list {
-    
+    gap: 30px;
+    margin: 0 auto;
     visibility: visible;
   }
 }
