@@ -24,7 +24,7 @@
   }
 
   &:hover {
-    transform: rotateX(1turn);
+    border-radius: 50px;
   }
 
   @each $index, $color in $colors-help {
